@@ -12,9 +12,9 @@ RUN python setup.py develop
 
 # we have to install these manually as the installer fails downloading them
 RUN npm install imagemin-gifsicle \
-								imagemin-jpegtran \
-								imagemin-optipng \
-								imagemin-pngquant
+                imagemin-jpegtran \
+                imagemin-optipng \
+                imagemin-pngquant
 
 # now build all the static assets
 RUN npm install --unsafe-perm && \
@@ -26,8 +26,6 @@ RUN npm install --unsafe-perm && \
 COPY lemur.conf.py /www/lemur/lemur.conf.py
 COPY start.sh /www/lemur/scripts/start.sh
 RUN chmod +x /www/lemur/scripts/start.sh
-
-VOLUME /www/lemur
 
 ENV LEMUR_PASSWORD lemur
 ENV LEMUR_HOST 0.0.0.0
