@@ -8,6 +8,8 @@ ADMINS = frozenset([''])
 
 THREADS_PER_PAGE = 8
 
+SQLALCHEMY_TRACK_MODIFICATIONS = 'True'
+
 # General
 
 # These will need to be set to `True` if you are developing locally
@@ -15,11 +17,11 @@ CORS = False
 debug = False
 
 # this is the secret key used by flask session management
-SECRET_KEY = 'F04VH3slNeE3i6cwN7IWgSgE2Jwbvfh3jBxgid4nDcy'
+SECRET_KEY = 'WThtU3hBQXpKWm8wMHgxQ0xRb0h0ajNpa1M2aXFrbVQ'
 
 # You should consider storing these separately from your config
-LEMUR_TOKEN_SECRET = 'CyhiVce7qdWJzVpavj1nNJgxBkLmPFLo'
-LEMUR_ENCRYPTION_KEYS = ['2xPx6lxlgzeFuCpEIZmAkFDROB4FPPeA']
+LEMUR_TOKEN_SECRET = 'dUNieEJnbm1YY29QTVFkN0JaMDRwYzlKTGVoWDZDRFY'
+LEMUR_ENCRYPTION_KEYS = ['dUx6eWxCOG1nbGl4YWVMVTdXNTU3WXUwanBzdkYwb2g=']
 
 # this is a list of domains as regexes that only admins can issue
 LEMUR_RESTRICTED_DOMAINS = []

@@ -24,6 +24,8 @@ RUN npm install --unsafe-perm && \
 
 # set up the config and script we need
 COPY lemur.conf.py /www/lemur/lemur.conf.py
+RUN mkdir ~/.lemur/ && ln -s /www/lemur/lemur.conf.py ~/.lemur/lemur.conf.py
+
 COPY start.sh /www/lemur/scripts/start.sh
 RUN chmod +x /www/lemur/scripts/start.sh
 
